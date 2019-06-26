@@ -693,9 +693,9 @@ def exec_waypoint_nav_demo(args):
         # End of demo - Stop vehicle and Store outputs to the controller output
         # directory.
         if reached_the_end:
-            print("Reached the end of path. Writing to controller_output...")
+            print("Reached the end of path. Writing to results folder ...")
         else:
-            print("Exceeded assessment time. Writing to controller_output...")
+            print("Exceeded assessment time. Writing to results folder ...")
         # Stop the car
         send_control_command(client, throttle=0.0, steer=0.0, brake=1.0)
         # Store the various outputs
