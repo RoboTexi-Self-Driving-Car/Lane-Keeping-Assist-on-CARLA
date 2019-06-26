@@ -1,0 +1,6 @@
+numpy
+pygame
+matplotlib
+google-api-python-client
+google-cloud
+google-cloud-vision

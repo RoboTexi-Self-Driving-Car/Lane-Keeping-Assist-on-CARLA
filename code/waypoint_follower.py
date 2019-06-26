@@ -28,7 +28,7 @@ import controller2d
 import configparser
 
 # Script level imports
-sys.path.append(os.path.abspath(sys.path[0] + '/..'))
+sys.path.append(os.path.abspath(sys.path[0] + '/../..'))
 import live_plotter as lv   # Custom live plotting library
 from carla            import sensor
 from carla.client     import make_carla_client, VehicleControl
@@ -75,7 +75,7 @@ PLOT_BOT           = 0.1
 PLOT_WIDTH         = 0.8
 PLOT_HEIGHT        = 0.8
 
-WAYPOINTS_FILENAME = 'racetrack_waypoints.txt'  # waypoint file to load
+WAYPOINTS_FILENAME = 'data/racetrack_waypoints.txt'  # waypoint file to load
 DIST_THRESHOLD_TO_LAST_WAYPOINT = 1.0  # some distance from last position before
                                        # simulation ends
 
@@ -87,7 +87,7 @@ INTERP_DISTANCE_RES       = 0.01 # distance between interpolated points
 
 # controller output directory
 CONTROLLER_OUTPUT_FOLDER = os.path.dirname(os.path.realpath(__file__)) +\
-                           '/controller_output/'
+                           '/results/'
 
 def make_carla_settings(args):
     """Make a CarlaSettings object with the settings we need.
@@ -784,4 +784,3 @@ if __name__ == '__main__':
         main()
     except KeyboardInterrupt:
         print('\nCancelled by user. Bye!')
-
